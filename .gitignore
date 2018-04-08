@@ -1,0 +1,6 @@
+*.gitattributes
+
+/AlgorithmsandDataStructures/4thlab/*
+/Paradigms/*
+4task(broken).py
+task10tl.cpp
