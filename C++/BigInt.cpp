@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
- 
+#include <iomanip>
 using namespace std;
  
 const unsigned base = 1000000000;
@@ -8,7 +8,7 @@ const int pow = 9;
 
 class BigInteger {
 private:
-    vector<int> elements;
+    vector<unsigned long long> elements;
     bool sign = false;		
     static int compare(BigInteger a, BigInteger b){
         if (a.elements.size() > b.elements.size()){
@@ -26,7 +26,27 @@ private:
 			}
 		}
         return 2;
-    }	
+    }
+    /*static vector<int> baseshuffle(vector<int> &a, int old, int need) {
+        vector<long long> p(max(old, need) + 1);
+        p[0] = 1;
+        for (int i = 1; i < p.size(); ++i) p[i] = p[i - 1] * 10;
+        vector<int> res;
+        long long cur = 0;
+        int curd = 0;
+        for (int i = 0; i < a.size(); ++i) {
+            cur += a[i] * p[curd];
+            curd += old;
+            while (curd >= need) {
+                res.push_back(cur % p[need]);
+                cur /= p[need];
+                curd -= need;
+            }
+        }
+        res.push_back(cur);
+        while ((!res.empty()) and (!res.back())) res.pop_back();
+        return res;
+    }*/
     static BigInteger plus (BigInteger a, BigInteger b) {
         int left = 0;
         for (size_t i = 0; i < max(a.elements.size(), b.elements.size()) or left; i++) {
@@ -62,6 +82,23 @@ private:
         }
         return a;
     }
+    friend BigInteger operator*(BigInteger a, BigInteger b) {
+        while (a.elements.size() < b.elements.size()) a.elements.push_back(0);
+        while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
+        vector<unsigned long long> c(2 * a.elements.size());
+        for (int i = 0; i < a.elements.size(); ++i)
+            for (int j = 0; j < a.elements.size(); ++j) c[i + j] += a.elements[i] * b.elements[j];
+        BigInteger res;
+        res.sign = (a.sign != b.sign);
+        for (int i = 0, carry = 0; i < c.size(); ++i) {
+            unsigned long long cur = c[i] + carry;
+            res.elements.push_back(cur % base);
+            carry = cur / base;
+        }
+        while ((!res.elements.empty()) and (!res.elements.back())) res.elements.pop_back();
+        if (res.elements.empty()) res.sign = 0;
+        return res;
+	}	
     friend BigInteger operator+(BigInteger a, BigInteger b) {
         BigInteger c;
         if (a.sign == b.sign) {
@@ -124,11 +161,10 @@ private:
         if (b.sign) {
 			out << '-';
 		}
-        for (int i = b.elements.size() - 1; i >= 0; i--) {
-        	if ((b.elements.back()) and (!b.elements[i])) {
-        		out << "00000000";
-        	}
-        	out << b.elements[i];
+		if (b.elements.empty()) out << 0;
+		else out << b.elements.back();
+        for (int i = b.elements.size() - 2; i >= 0; --i) {
+        	out << setw(pow) << setfill('0') << b.elements[i];
         }
         return out;
     }
@@ -149,12 +185,14 @@ private:
         return in;
     }
 };
- 
- 
+
 int main() {
     BigInteger a, b, c;
     cin >> a >> b;
-    cout << a << " " << b <<'\n';
+    /*cout << a << " " << b <<'\n';
     cout << a - b  <<'\n';
-    cout << a << " " << b <<'\n';
+    cout << a << " " << b <<'\n';*/
+    cout << a << ' ' << b << '\n';
+    cout << a * b << '\n';
+    cout << a << ' ' << b << '\n';
 }
