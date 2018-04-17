@@ -8,7 +8,7 @@ const int pow = 9;
 
 class BigInteger {
 private:
-    vector<unsigned long long> elements;
+    vector<unsigned> elements;
     bool sign = false;		
     static int compare(BigInteger a, BigInteger b){
         if (a.elements.size() > b.elements.size()){
@@ -87,7 +87,8 @@ private:
         while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
         vector<unsigned long long> c(2 * a.elements.size());
         for (int i = 0; i < a.elements.size(); ++i)
-            for (int j = 0; j < a.elements.size(); ++j) c[i + j] += a.elements[i] * b.elements[j];
+            for (int j = 0; j < a.elements.size(); ++j)
+				c[i + j] +=(unsigned long long) a.elements[i] * b.elements[j];
         BigInteger res;
         res.sign = (a.sign != b.sign);
         for (int i = 0, carry = 0; i < c.size(); ++i) {
