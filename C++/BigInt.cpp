@@ -85,6 +85,27 @@ private:
     friend BigInteger operator*(BigInteger a, BigInteger b) {
         while (a.elements.size() < b.elements.size()) a.elements.push_back(0);
         while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
+        BigInteger res;
+        res.sign = (a.sign != b.sign);
+        res.elements.resize(2 * a.elements.size());
+        for (int i = 0; i < a.elements.size(); ++i) {
+        	int carry = 0;
+        	for (int j = 0; j < a.elements.size() or carry; ++j) {
+        		unsigned long long cur = res.elements[i + j] + carry;
+        		if (j < a.elements.size()) {
+        			cur += (unsigned long long) a.elements[i] * b.elements[j];
+        		}
+        		res.elements[i + j] = cur % base;
+        		carry = cur / base;
+        	}
+        }
+        while ((!res.elements.empty()) and (!res.elements.back())) res.elements.pop_back();
+        if (res.elements.empty()) res.sign = 0;
+        return res;
+	}
+    /*friend BigInteger operator*(BigInteger a, BigInteger b) {
+        while (a.elements.size() < b.elements.size()) a.elements.push_back(0);
+        while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
         vector<unsigned long long> c(2 * a.elements.size());
         for (int i = 0; i < a.elements.size(); ++i)
             for (int j = 0; j < a.elements.size(); ++j)
@@ -99,7 +120,7 @@ private:
         while ((!res.elements.empty()) and (!res.elements.back())) res.elements.pop_back();
         if (res.elements.empty()) res.sign = 0;
         return res;
-	}	
+	}*/	
     friend BigInteger operator+(BigInteger a, BigInteger b) {
         BigInteger c;
         if (a.sign == b.sign) {
