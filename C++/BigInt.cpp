@@ -3,12 +3,12 @@
 #include <iomanip>
 using namespace std;
  
-const unsigned base = 1000000000;
+const int base = 1000000000;
 const int pow = 9;
 
 class BigInteger {
 private:
-    vector<unsigned> elements;
+    vector<int> elements;
     bool sign = false;		
     static int compare(BigInteger a, BigInteger b){
         if (a.elements.size() > b.elements.size()){
@@ -27,26 +27,6 @@ private:
 		}
         return 2;
     }
-    /*static vector<int> baseshuffle(vector<int> &a, int old, int need) {
-        vector<long long> p(max(old, need) + 1);
-        p[0] = 1;
-        for (int i = 1; i < p.size(); ++i) p[i] = p[i - 1] * 10;
-        vector<int> res;
-        long long cur = 0;
-        int curd = 0;
-        for (int i = 0; i < a.size(); ++i) {
-            cur += a[i] * p[curd];
-            curd += old;
-            while (curd >= need) {
-                res.push_back(cur % p[need]);
-                cur /= p[need];
-                curd -= need;
-            }
-        }
-        res.push_back(cur);
-        while ((!res.empty()) and (!res.back())) res.pop_back();
-        return res;
-    }*/
     static BigInteger plus (BigInteger a, BigInteger b) {
         int left = 0;
         for (size_t i = 0; i < max(a.elements.size(), b.elements.size()) or left; i++) {
@@ -82,45 +62,52 @@ private:
         }
         return a;
     }
+    static pair <int, int> add(int a, int b) {
+    	if (a >= base - b) return {a - (base - b), 1};
+    	return {a + b, 0};
+	}
+	static pair <int, int> multiply(int a, int b) {
+        int ans = 0, carry = 0, overflow = 0;
+        while (b) {
+            if (b & 1) {
+                pair<int, int> sum = add(ans, a);
+                ans = sum.first;
+                overflow += carry + sum.second;
+            }
+            pair<int, int> sum = add(a, a);
+            a = sum.first;
+            carry = (carry << 1) + sum.second;
+            b >>= 1;
+        }
+        return {overflow, ans};
+	}
     friend BigInteger operator*(BigInteger a, BigInteger b) {
         while (a.elements.size() < b.elements.size()) a.elements.push_back(0);
         while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
         BigInteger res;
         res.sign = (a.sign != b.sign);
-        res.elements.resize(2 * a.elements.size());
+        res.elements.resize(2 * a.elements.size(), 0);
         for (int i = 0; i < a.elements.size(); ++i) {
         	int carry = 0;
-        	for (int j = 0; j < a.elements.size() or carry; ++j) {
-        		unsigned long long cur = res.elements[i + j] + carry;
+        	for (int j = 0; (j < a.elements.size()) or carry; ++j) {
+        		pair<int, int> temp = add(res.elements[i + j], carry);
         		if (j < a.elements.size()) {
-        			cur += (unsigned long long) a.elements[i] * b.elements[j];
+        			pair<int, int> temp2 = multiply(a.elements[i], b.elements[j]);
+        			pair<int, int> temp3 = add(temp.first, temp2.second);
+        			res.elements[i + j] = temp3.first;
+        			carry = temp.second + temp2.first + temp3.second;
+        		} else {
+        			res.elements[i + j] = temp.first;
+        			carry = temp.second;
         		}
-        		res.elements[i + j] = cur % base;
-        		carry = cur / base;
+        		//cout << temp.second << ' ' << temp2.first << ' ' << temp3.second << "A " << temp3.first << '\n';
+        		//cout << carry << ' ' << res.elements[i + j] << ' ' << i << ' ' << j << '\n';
         	}
         }
         while ((!res.elements.empty()) and (!res.elements.back())) res.elements.pop_back();
         if (res.elements.empty()) res.sign = 0;
         return res;
 	}
-    /*friend BigInteger operator*(BigInteger a, BigInteger b) {
-        while (a.elements.size() < b.elements.size()) a.elements.push_back(0);
-        while (b.elements.size() < a.elements.size()) b.elements.push_back(0);
-        vector<unsigned long long> c(2 * a.elements.size());
-        for (int i = 0; i < a.elements.size(); ++i)
-            for (int j = 0; j < a.elements.size(); ++j)
-				c[i + j] +=(unsigned long long) a.elements[i] * b.elements[j];
-        BigInteger res;
-        res.sign = (a.sign != b.sign);
-        for (int i = 0, carry = 0; i < c.size(); ++i) {
-            unsigned long long cur = c[i] + carry;
-            res.elements.push_back(cur % base);
-            carry = cur / base;
-        }
-        while ((!res.elements.empty()) and (!res.elements.back())) res.elements.pop_back();
-        if (res.elements.empty()) res.sign = 0;
-        return res;
-	}*/	
     friend BigInteger operator+(BigInteger a, BigInteger b) {
         BigInteger c;
         if (a.sign == b.sign) {
@@ -170,6 +157,10 @@ private:
             	return c;
             }
         }
+    }
+    friend BigInteger operator*=(BigInteger &a, BigInteger b) {
+        a = a * b;
+        return a;
     }
     friend BigInteger operator+=(BigInteger &a, BigInteger b) {
         a = a + b;
