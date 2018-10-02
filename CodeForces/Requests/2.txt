@@ -1,0 +1,17 @@
+assets.codeforces.com
+codeforces.com
+connect.facebook.net
+fonts.gstatic.com
+fonts.googleapis.com
+www.facebook.com
+google-analytics.com
+mc.yandex.ru
+pubsub.codeforces.com
+staticxx.facebook.com
+static.xx.fbcdn.net
+st.codeforces.com
+top-fwz1.mail.ru
+userpic.codeforces.com
+vk.com
+yandex.st
+yastatic.net
