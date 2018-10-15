@@ -1,0 +1,33 @@
+# Makefile
+
+INSTALL_DIR := 4out
+
+LIBRARY := libmylib.so
+
+MAJOR := 5
+MINOR := 1
+RELEASE := 10
+
+FULL_LIBRARY := $(LIBRARY).$(MAJOR).$(MINOR).$(RELEASE)
+
+OBJECTS := $(INSTALL_DIR)/hello.o $(INSTALL_DIR)/here.o $(INSTALL_DIR)/bye.o
+
+CXX := g++
+
+
+all: $(INSTALL_DIR)/$(FULL_LIBRARY)
+
+$(INSTALL_DIR):
+	mkdir -p $@
+
+$(INSTALL_DIR)/%.o: %.cpp | $(INSTALL_DIR)
+	$(CXX) -fPIC -c -o $@ $<
+
+$(INSTALL_DIR)/$(FULL_LIBRARY): $(OBJECTS)
+	$(CXX) -Wl,-soname=$(LIBRARY).$(MAJOR) -shared -fPIC -o $@ $^
+	ln -sf $(FULL_LIBRARY) $(INSTALL_DIR)/$(LIBRARY).$(MAJOR)
+	ln -sf $(FULL_LIBRARY) $(INSTALL_DIR)/$(LIBRARY)
+
+
+clean:
+	rm -rf $(INSTALL_DIR)

@@ -1,0 +1,9 @@
+cd c:\\users\\user\\itmo\\c++\\hw3make
+g++ -o test_make hello.cpp here.cpp bye.cpp main.cpp
+./test_make
+-MMD
+-fPIC
+-r
+-f
+-rf
+rm

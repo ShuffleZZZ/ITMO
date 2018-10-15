@@ -1,0 +1,18 @@
+# Makefile
+INSTALL_DIR := 3out
+LIBRARY := $(INSTALL_DIR)/mylib.a
+OBJECTS := $(INSTALL_DIR)/hello.o $(INSTALL_DIR)/here.o $(INSTALL_DIR)/bye.o
+CXX := g++
+
+all: $(LIBRARY) $(INSTALL_DIR)/main.o
+
+$(LIBRARY): $(OBJECTS)
+	ar cr $@ $^
+$(INSTALL_DIR)/%.o: %.cpp
+	mkdir -p $(INSTALL_DIR)
+	$(CXX) -c -o $@ $<
+$(INSTALL_DIR)/main.o: main.cpp
+	mkdir -p $(INSTALL_DIR)
+	$(CXX) -c -o $@ $<
+clean:
+	rm -rf $(INSTALL_DIR)
