@@ -3,7 +3,7 @@
 template<class T>
 Array<T>::Array(size_t size, const T& value) : mSize(size)
 {
-	mArray =(T*) new char[mSize * sizeof(T)];
+	mArray = reinterpret_cast <T*>(new char[mSize * sizeof(T)]);
 	for (size_t i = 0; i < mSize; ++i)
 	{
 		new (mArray + i) T(value);
@@ -13,7 +13,7 @@ Array<T>::Array(size_t size, const T& value) : mSize(size)
 template<class T>
 Array<T>::Array(size_t size) : mSize(size)
 {
-	mArray =(T*) new char[mSize * sizeof(T)];
+	mArray = reinterpret_cast <T*>(new char[mSize * sizeof(T)]);
 	for (size_t i = 0; i < mSize; ++i)
 	{
 		new (mArray + i) T();
@@ -30,7 +30,7 @@ Array<T>::Array()
 template<class T>
 Array<T>::Array(const Array<T>& arg) : mSize(arg.size())
 {
-	mArray =(T*) new char[mSize * sizeof(T)];
+	mArray = reinterpret_cast <T*>(new char[mSize * sizeof(T)]);
 	for (size_t i = 0; i < mSize; ++i)
 	{
 		new (mArray + i) T(arg[i]);
@@ -45,7 +45,7 @@ Array<T>& Array<T>::operator =(const Array<T>& arg)
 	{
 		clean();
 		mSize = arg.mSize;
-		mArray =(T*) new char[mSize * sizeof(T)];
+		mArray = reinterpret_cast <T*>(new char[mSize * sizeof(T)]);
 		for (size_t i = 0; i < mSize; ++i)
 		{
 			new (mArray + i) T(arg[i]);

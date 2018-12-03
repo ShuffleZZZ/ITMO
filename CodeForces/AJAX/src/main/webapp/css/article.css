@@ -1,0 +1,57 @@
+main article .title {
+    padding: 10px 0 5px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3B5998;
+}
+
+main article .information {
+    font-size: 0.9rem;
+    color: rgb(136, 136, 136);
+}
+
+main article .body {
+    font-size: 0.9rem;
+    border-left: 4px solid #B9B9B9;
+    padding-left: 1em;
+}
+
+main article .footer {
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: var(--border-radius);
+    height: 25px;
+    padding: 9px 7px 5px 5px;
+}
+
+main article .footer .left {
+    position: relative;
+    float: left;
+    margin: 0px;
+}
+
+main article .footer .left .positive-score {
+    vertical-align: middle;
+    font-weight: bold;
+    color: green;
+}
+
+main article .footer .left img {
+    vertical-align: middle;
+}
+
+main article .footer .right {
+    position: relative;
+    float: right;
+    margin: 0px;
+}
+
+main article .footer .right .time {
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+main article .footer .right img {
+    vertical-align: middle;
+    padding-left: 7px;
+}
