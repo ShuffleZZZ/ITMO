@@ -22,28 +22,29 @@
                     <input id="text" name="text" value="${text!}"/>
                 </div>
             </div>
+            <#if error??>
+                <div class="error">
+                ${error}
+                </div>
+            </#if>
             <div class="button-field">
                 <input type="submit" value="Send">
             </div>
-            <#if error??>
-            <div class="error">
-                ${error}
-            </div>
-            </#if>
         </form>
     </div>
-    <#if error??>
-    <#else>
+    <#if !error??>
     <section>
         <div class="header">
             Chat
         </div>
-        <#list talks as talk>
-            <ul>
-                ${talk.text} by ${talk.source} to ${talk.target}
-                <div class="date">${talk.time} </div>
-            </ul>
-        </#list>
+        <div class="body">
+            <#list talks as talk>
+                <ul>
+                    ${talk.text} by ${talk.source} to ${talk.target}
+                    <div class="date">${talk.time} </div>
+                </ul>
+            </#list>
+        </div>
     </section>
     </#if>
 </div>
