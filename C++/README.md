@@ -7,6 +7,7 @@
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW1">1. Simple programs</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW2class">2. Class sample</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW3make">3. "Make" project building</a>
+## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW4Cmake">4. "Cmake" project building</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW5stringClass">5. Self string class</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW6pictures">6. Operators overloading</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B/HW7template">7. Self array class</a>
