@@ -1,0 +1,1 @@
+add_library(lib_rational STATIC lib_rational.cpp lib_rational.h)
