@@ -1,14 +1,16 @@
 # ITMO subjects
 
-## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures">Algorithms and sata structures</a>
-	•Laboratory works
+## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures">Algorithms and data structures</a>
+	ï¿½Laboratory works
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/C%2B%2B">C++</a>
-	•Hometasks
+	ï¿½Hometasks
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/CodeForces">Web programming</a>
-	•Hometasks
+	ï¿½Hometasks
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Diskret">Discret math</a>
-	•Laboratory works
+	ï¿½Laboratory works
+## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/JavaAdvanced">Advanced java</a>
+	ï¿½Hometasks
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Paradigms/src">Paradigms of programming</a>
-	•Hometasks
+	ï¿½Hometasks
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Programming">Programming introduction</a>
-	•Hometasks
+	ï¿½Hometasks

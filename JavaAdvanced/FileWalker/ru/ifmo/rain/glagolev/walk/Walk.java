@@ -58,11 +58,9 @@ public class Walk {
                 }
             } catch (IOException e) {
                 System.out.println("Output file error: " + e.getMessage());
-                return;
             }
         } catch (IOException e) {
             System.out.println("Input file error: " + e.getMessage());
-            return;
         }
     }
 
