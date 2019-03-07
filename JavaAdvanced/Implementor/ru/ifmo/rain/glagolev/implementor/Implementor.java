@@ -54,7 +54,6 @@ public class Implementor implements Impler {
             printMethod(method, out);
         }
         out.write('}');
-        out.close();
     }
 
     private static void printMethod(Method method, BufferedWriter out) throws IOException {
