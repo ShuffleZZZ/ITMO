@@ -10,3 +10,4 @@
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/8thlab">8. Graph connection</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/9thlab">9. Graph paths</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/10thlab">10. String algorithms</a>
+## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/11thlab">11. Flow problems</a>
