@@ -52,15 +52,15 @@ public class ParallelMapperImpl implements ParallelMapper {
                 tasks.wait();
             }
             task = tasks.poll();
-            //tasks.notifyAll();
+            tasks.notifyAll();
         }
         task.run();
     }
 
-    private void addTask(final Runnable task) throws InterruptedException {
+    private void addTask(final Runnable task) {
         synchronized (tasks) {
             tasks.add(task);
-            tasks.notify();
+            tasks.notifyAll();
         }
     }
 
@@ -96,7 +96,7 @@ public class ParallelMapperImpl implements ParallelMapper {
             for (Thread thread : pool) {
                 thread.join();
             }
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
             //
         }
     }
@@ -105,7 +105,7 @@ public class ParallelMapperImpl implements ParallelMapper {
         private final List<R> list;
         private int count;
 
-        public Results(final int size) {
+        private Results(final int size) {
             list = new LinkedList<>(Collections.nCopies(size, null));
             count = 0;
         }

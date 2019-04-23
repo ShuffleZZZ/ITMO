@@ -111,7 +111,6 @@ public class IterativeParallelism implements ScalarIP {
         int shift = 0;
         final List<List<? extends T>> sublists = new ArrayList<>(usedThreads);
         for (int j = 0; j < usedThreads; ++j) {
-            final int ind = j;
             final int leftBoard = shift + j * sublistsSize;
             int tempRightBoard = shift + (j + 1) * sublistsSize;
             if (j < mod) {
