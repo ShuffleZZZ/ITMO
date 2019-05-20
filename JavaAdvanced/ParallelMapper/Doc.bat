@@ -1,0 +1,1 @@
+javadoc -html5 -d Javadoc -link https://docs.oracle.com/en/java/javase/11/docs/api/ -cp ../lib/*;../artifacts/* ru/ifmo/rain/glagolev/mapper/IterativeParallelism.java ru/ifmo/rain/glagolev/mapper/ParallelMapperImpl.java info/kgeorgiy/java/advanced/mapper/ParallelMapper.java

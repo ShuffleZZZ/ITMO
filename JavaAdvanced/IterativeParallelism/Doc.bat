@@ -1,0 +1,1 @@
+javadoc -html5 -d Javadoc -link https://docs.oracle.com/en/java/javase/11/docs/api/ -cp ../lib/*;../artifacts/* ru/ifmo/rain/glagolev/concurrent/IterativeParallelism.java info/kgeorgiy/java/advanced/concurrent/ScalarIP.java
