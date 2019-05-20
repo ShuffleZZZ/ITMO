@@ -11,3 +11,4 @@
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Diskret/9thlab">9. Matroids</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Diskret/10thlab">10. Matroid crossing</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Diskret/11thlab">11. Generating functions</a>
+## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Diskret/12thlab">12. Turing machines</a>
