@@ -1,0 +1,1 @@
+javadoc -private -html5 -d Javadoc -link https://docs.oracle.com/en/java/javase/11/docs/api/ -cp ../lib/*;../artifacts/* ru/ifmo/rain/glagolev/implementor/Implementor.java info/kgeorgiy/java/advanced/implementor/Impler.java info/kgeorgiy/java/advanced/implementor/JarImpler.java info/kgeorgiy/java/advanced/implementor/ImplerException.java
