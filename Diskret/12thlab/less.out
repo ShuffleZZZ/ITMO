@@ -1,0 +1,45 @@
+start: q1
+accept: Sa
+reject: Sr
+blank: #
+q1 # -> q2 # >
+q1 < -> q2 # >
+q1 0 -> q1 0 >
+q1 1 -> q1 1 >
+q1 Le -> q1 Le >
+q1 Eq -> q1 Eq >
+q1 Gr -> q1 Gr >
+q2 # -> q3 # <
+q2 0 -> q2 0 >
+q2 1 -> q2 1 >
+q3 # -> q8 # <
+q3 0 -> q4 # <
+q3 1 -> q6 # <
+q4 # -> q5 # <
+q4 0 -> q4 0 <
+q4 1 -> q4 1 <
+q5 # -> q1 Eq >
+q5 0 -> q1 Eq >
+q5 1 -> q1 Gr >
+q5 Le -> q5 Le <
+q5 Eq -> q5 Eq <
+q5 Gr -> q5 Gr <
+q6 # -> q7 # <
+q6 0 -> q6 0 <
+q6 1 -> q6 1 <
+q7 # -> q1 Le >
+q7 0 -> q1 Le >
+q7 1 -> q1 Eq >
+q7 Le -> q7 Le <
+q7 Eq -> q7 Eq <
+q7 Gr -> q7 Gr <
+q8 # -> q9 # >
+q8 0 -> q8 0 <
+q8 1 -> Sr 1 ^
+q8 Le -> q8 Le <
+q8 Eq -> q8 Eq <
+q8 Gr -> q8 Gr <
+q9 # -> Sr Eq ^
+q9 Le -> Sa 0 ^
+q9 Eq -> q9 Eq >
+q9 Gr -> Sr 1 ^
