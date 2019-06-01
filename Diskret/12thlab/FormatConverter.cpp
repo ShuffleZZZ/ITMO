@@ -2,7 +2,7 @@
 #include <fstream>
 
 // visit https://turingmachinesimulator.com/ to check solutions.
-// 1. only single-letter statements are used on the site.
+// 1. Only single-char statements allowed for writing.
 // 2. use '_' symbol for blank spaces implementation.
 
 int main()
