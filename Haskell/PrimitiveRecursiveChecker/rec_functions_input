@@ -1,0 +1,18 @@
+if = R<U 2 1, U 4 2>
+add = R<U 1 1, S<N, U 3 3>>
+mul = R<Z, S<add, U 3 1, U 3 3>>
+pow = R<S<N, Z>, S<mul, U 3 3, U 3 1>>
+not = S<R<S<N, Z>, S<Z, U 3 1>>, Z, U 1 1>
+even = S<R<S<N, Z>, S<not, U 3 3>>, Z, U 1 1>
+pred = S<R<Z, U 3 2>, Z, U 1 1>
+sub = R<U 1 1, S<pred, U 3 3>>
+subrev = S<sub, U 2 2, U 2 1>
+abs = S<add, sub, subrev>
+eq = S<not, abs>
+geq = S<not, subrev>
+mod = S<R<U 2 1, S<if, U 4 4, S<sub, U 4 4, U 4 2>, S<geq, U 4 4, U 4 2>>>, U 2 1, U 2 2, U 2 1>
+divisible = S<not, mod>
+prime = S<eq, S<R<Z, S<add, S<divisible, U 3 1, U 3 2>, U 3 3>>, U 1 1, U 1 1>, S<N, Z>>
+nth = S<if, S<N,S<N, Z>>, S<R<Z, S<if, U 3 3, S<if, U 3 3, S<if, S<N, S<N, U 3 3>>, U 3 2, S<eq, U 3 3, S<add, U 3 1, U 3 1>>>, S<prime, U 3 2>>,S<even, U 3 3>>>, U 1 1, S<pow, S<N,S<N, Z>>, S<N, U 1 1>>>, U 1 1>nth(0)nth(1)
+nth(2)
+nth(3)nth(4)nth(5)nth(6)nth(7)nth(8)nth(9)nth(10)nth(11)nth(12)nth(13)nth(14)nth(15)nth(16)nth(17)
