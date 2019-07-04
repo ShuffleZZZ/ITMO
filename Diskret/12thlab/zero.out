@@ -1,8 +1,0 @@
-start: S
-accept: Sa
-reject: Sr
-blank: #
-S # -> Sa # ^
-S 0 -> O 0 >
-O 0 -> S 0 >
-O # -> Sr # >
