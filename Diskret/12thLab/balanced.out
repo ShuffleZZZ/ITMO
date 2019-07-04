@@ -1,0 +1,16 @@
+start: q0
+accept: Sa
+reject: Sr
+blank: #
+q0 # -> q2 # <
+q0 ( -> q0 ( >
+q0 ) -> q1 x <
+q0 x -> q0 x >
+q1 # -> Sr # ^
+q1 ( -> q0 x >
+q1 ) -> Sr ) ^
+q1 x -> q1 x <
+q2 # -> Sa # >
+q2 ( -> Sr ( ^
+q2 ) -> Sr ) ^
+q2 x -> q2 x <
