@@ -2,7 +2,7 @@
 
 # Multiplexing
 
-Same modified echo from <a href="https://github.com/ShuffleZZZ/os-net/FirstVersion">previous task's first version</a>.
+Same modified echo from <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/OperationSystems/net/FirstVersion">previous task's first version</a>.
 
 ## Usage:
 

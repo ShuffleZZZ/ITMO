@@ -1,6 +1,6 @@
 ﻿# Multiplexing
 
-Same echo from <a href="https://github.com/ShuffleZZZ/os-net">previous task</a>.
+Same echo from <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/OperationSystems/net">previous task</a>.
 
 ## Usage:
 
