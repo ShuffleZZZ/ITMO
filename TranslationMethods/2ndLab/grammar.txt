@@ -1,0 +1,28 @@
+S -> aVCS
+S -> Epsilon
+
+C -> ,VC
+C -> ;
+
+V -> *V
+V -> B
+
+B -> &a
+B -> a
+
+S == String
+C == Next variable or semicolon
+V == Pointers to var
+B == Variable or reference
+
+a == type or variable name
+
+First:
+S == {NAME, Epsilon}
+C == {COMMA, SEMICOLON}
+V == {POINTER, NAME}
+
+Follow:
+S == {END}
+C == {END, POINTER, NAME}
+V == {COMMA, SEMICOLON}
