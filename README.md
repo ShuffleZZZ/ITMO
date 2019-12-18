@@ -20,9 +20,9 @@
 
 ## 3rd course
 
-### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/TranslationMethods">Translation Methods</a>
-### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/ParallelProgramming">Parallel Programming</a>
-### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Frontend">Frontend</a>
+### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/TranslationMethods">Translation Methods <i>(ongoing)</i></a>
+### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/ParallelProgramming">Parallel Programming <i>(ongoing)</i></a>
+### <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/Frontend">Frontend <i>(ongoing)</i></a>
 
 
 
