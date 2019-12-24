@@ -1,4 +1,4 @@
-# Algorithms and sata structures
+# Programming introduction
 
 ## Stack calculator
 ## Classes inheritance
