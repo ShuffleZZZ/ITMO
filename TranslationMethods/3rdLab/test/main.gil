@@ -1,0 +1,57 @@
+fun add(a : Double, b : Double): Double {
+    return a + b
+}
+
+fun add5(a : Int) {
+    c: Int
+    c = a + 5
+}
+
+d: String
+if (d) {
+    a = 5 + 2 - 4
+}
+
+if (d == "") {
+    e = true || false
+}
+
+g = nextInt()
+h = 1 + 2 - 3
+i = nextLong()
+i1: Long
+i1 = i + 2343523565
+j = nextDouble()
+j1: Double
+j1 = j + 0.0
+k = nextLine()
+k1: String
+k1 = "asd" + k
+
+g, h = h, g
+g, h, i, i1 = i1, 123, g, h
+z = k1
+
+fun empty(): Bool {
+    l = true ^ true
+    m = true ^ false
+
+    if (add5(2)) {
+        N5 = 'a'
+    }
+
+    return m ^ l
+}
+
+for (n in h) {
+    print(n)
+}
+
+for (n in -5..5) {
+    print(n - 1)
+}
+
+n: Int
+while (n) {
+    n = n % g
+}

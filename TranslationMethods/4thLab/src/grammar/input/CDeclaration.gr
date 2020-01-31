@@ -1,0 +1,19 @@
+grammar CDeclaration
+
+header {package CDeclaration;}
+
+fields[String val;]
+
+declaration: type vars SEMICOLON declaration { res.val = type.val + " " + vars.val + "; " + declaration.val; } | EPSILON { res.val = ""; } ;
+type: IDENTIFIER { res.val = IDENTIFIER.text; } ;
+name: IDENTIFIER { res.val = IDENTIFIER.text; } ;
+vars: variable nextVar { res.val = variable.val + nextVar.val; } ;
+nextVar: COMMA vars { res.val = COMMA.text + " " + vars.val; } | EPSILON { res.val = ""; } ;
+variable: POINTER variable { res.val = POINTER.text + variable.val; } | name { res.val = name.val; } ;
+
+IDENTIFIER: "[a-zA-Z][a-zA-Z0-9]*" ;
+POINTER: "\*" ;
+COMMA: "," ;
+SEMICOLON: ";" ;
+
+WHITESPACE : "[ \t\r\n]" -> skip ;
