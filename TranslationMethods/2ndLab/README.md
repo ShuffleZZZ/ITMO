@@ -8,10 +8,10 @@ Included support for pointers and references.
 
 Both variable and type names are using the same terminal in grammar for simplicity.
 
-You can check out the <a href="https://github.com/ShuffleZZZ/ITMO/blob/master/TranslationMethods/2ndLab/grammar.txt">grammar.txt</a> file for such information as: 
-	• grammar structure
-	• states, terminals and their definitions
-	• "First" and "Follow" sets
+You can check out the <a href="https://github.com/ShuffleZZZ/ITMO/blob/master/TranslationMethods/2ndLab/grammar.txt">grammar.txt</a> file for such information as: <br>
+	• grammar structure <br>
+	• states, terminals and their definitions <br>
+	• "First" and "Follow" sets <br>
 
 Samples of correct and incorrect expressions could be found at <a href="https://github.com/ShuffleZZZ/ITMO/blob/master/TranslationMethods/2ndLab/tests">tests</a> folder
 
