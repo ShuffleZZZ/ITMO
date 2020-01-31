@@ -1,4 +1,4 @@
-# Algorithms and sata structures
+# Algorithms and data structures
 
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/1stLab">1. Sort</a>
 ## <a href="https://github.com/ShuffleZZZ/ITMO/tree/master/AlgorithmsandDataStructures/2ndLab">2. Data structures</a>
