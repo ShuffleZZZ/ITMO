@@ -1,7 +1,5 @@
 # Задача «Осадки в виде фрикаделек»
 
-> Мы очень хотим, чтобы код вы написали сами, а не пользовались внешними библиотеками.
-
 ## Основное задание
 
 Свадьба Аркадия сыграна, торт съеден, гости проводили молодоженов в их новую семейную жизнь. Что же дальше?
@@ -103,10 +101,3 @@ const cloudyPlan = planTrip(availableGeoIds)
 - [Цепочка вызовов](https://medium.com/backticks-tildes/understanding-method-chaining-in-javascript-647a9004bd4f)
 - [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/reference/Global_Objects/Promise)
 - [Async/Await](https://learn.javascript.ru/async-await)
-
-<img
-    src="https://yastatic.net/s3/lyceum/ifmo-homeworks/weather.jpg" 
-    width="1024"
-    height="637"
-    alt="Weather's meatballs"
-/>

@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        final int TESTS_LEFT_BOARDER = 26, TESTS_RIGHT_BOARDER = 29;
+        final int TESTS_LEFT_BOARDER = 0, TESTS_RIGHT_BOARDER = 29;
 
         for (int i = TESTS_LEFT_BOARDER; i <= TESTS_RIGHT_BOARDER; i++) {
             String s = Files.readString(Paths.get("tests/input" + i + ".in"));

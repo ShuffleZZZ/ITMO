@@ -9,9 +9,11 @@ for (var noun = 99; noun >= 0; noun--) {
         for (var i = 0; i < list.length; i++) {
             tempList.push(list[i]);
         }
+
         var optcode = 0;
         tempList[1] = noun;
         tempList[2] = verb;
+
         while (true) {
             if (tempList[optcode] === 1) {
                 tempList[tempList[optcode + 3]] = tempList[tempList[optcode + 1]] + tempList[tempList[optcode + 2]];
@@ -23,6 +25,7 @@ for (var noun = 99; noun >= 0; noun--) {
                 break;
             }
         }
+        
         if (tempList[0] === 19690720) {
             print(100 * noun + verb);
         }

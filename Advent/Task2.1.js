@@ -1,8 +1,8 @@
-
 var list = readline().split(",");
 for (var i = 0; i < list.length; i++) {
     list[i] = parseInt(list[i]);
 }
+
 list[1] = 12;
 list[2] = 2;
 optcode = 0;

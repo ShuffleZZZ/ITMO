@@ -1,7 +1,5 @@
 # Задача «Собеседование Аркадия»
 
-> Мы очень хотим, чтобы код вы написали сами, а не пользовались внешними библиотеками.
-
 ## Основное задание
 
 Аркадий успешно съездил в путешествие, отдохнул и вернулся с супругой домой. Следующий его важный
@@ -117,11 +115,3 @@
 
 - [Документация по TypeScript](https://www.typescriptlang.org/docs/home.html)
 - [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/)
-
-<br>
-<img
-    src="https://yastatic.net/s3/lyceum/ifmo-homeworks/interview.jpg" 
-    width="683"
-    height="453"
-    alt="Interview"
-/>

@@ -1,7 +1,5 @@
 # Задача «Аркадию пора на лекцию»
 
-> Мы очень хотим, чтобы код вы написали сами, а не пользовались внешними библиотеками.
-
 ## Основное задание
 
 После криминальной интриги с участием друзей Аркадий возвращается в мрачные стены университета —
@@ -105,10 +103,3 @@ lecturer.on('slide.funny', students.Sam, function() {
 - [Метод call для функций](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - [Метод apply для функций](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 - [Метод bind для функций](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
-
-<img
-    src="https://yastatic.net/s3/lyceum/ifmo-homeworks/task-4-meme.jpeg" 
-    width="803"
-    height="803"
-    alt="Monty Python"
-/>
