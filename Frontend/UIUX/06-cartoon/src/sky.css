@@ -1,0 +1,153 @@
+.moon {
+  animation: moon_cycle 60s linear infinite;
+}
+
+@keyframes moon_cycle {
+  0% {
+    animation-timing-function: ease-out;
+
+    transform: rotate(0deg) translateX(-550px) rotate(0deg);
+  }
+
+  40%,
+  60% {
+    animation-timing-function: ease-in;
+
+    transform: rotate(90deg) translateX(-550px) rotate(-90deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(180deg) translateX(-550px) rotate(-180deg);
+  }
+}
+
+.canvas:before {
+  animation: lightning 4s linear infinite;
+}
+
+@keyframes lightning {
+  5%,
+  7%,
+  12%,
+  25%,
+  50% {
+    opacity: 0;
+  }
+
+  6%,
+  20% {
+    opacity: 1;
+  }
+}
+
+.cloud:nth-child(1) {
+  top: 170px;
+  left: -200px;
+
+  animation: cloud-1 16s linear infinite;
+
+  transform: scale(-0.65, 0.65);
+}
+
+@keyframes cloud-1 {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 1100px;
+  }
+}
+
+.cloud:nth-child(2) {
+  top: 100px;
+  left: 560px;
+
+  animation: cloud-2 24s linear infinite;
+
+  transform: scale(0.57);
+}
+
+@keyframes cloud-2 {
+  0% {
+    margin-left: 0;
+  }
+
+  32% {
+    margin-left: 340px;
+
+    animation-timing-function: step-start;
+  }
+
+  33% {
+    margin-left: -720px;
+
+    animation-timing-function: linear;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.cloud:nth-child(3) {
+  top: 15px;
+  left: 650px;
+
+  animation: cloud-3 40s linear infinite;
+
+  transform: scale(0.35);
+}
+
+@keyframes cloud-3 {
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 200px;
+
+    animation-timing-function: step-start;
+  }
+
+  21% {
+    margin-left: -800px;
+
+    animation-timing-function: linear;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.cloud:nth-child(4) {
+  top: 60px;
+  left: 735px;
+
+  animation: cloud-4 30s linear infinite;
+
+  transform: scale(-0.4, 0.4);
+}
+
+@keyframes cloud-4 {
+  0% {
+    margin-left: 0;
+  }
+
+  11% {
+    margin-left: 110px;
+
+    animation-timing-function: step-start;
+  }
+
+  12% {
+    margin-left: -890px;
+
+    animation-timing-function: linear;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}

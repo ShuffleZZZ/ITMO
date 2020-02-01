@@ -1,0 +1,197 @@
+body {
+  position: relative;
+
+  display: block;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  background-image: url('static/background.jpg');
+
+  font-family: 'Verdana', serif;
+}
+
+header {
+  position: fixed;
+
+  width: 100%;
+  padding: 10px;
+
+  border-bottom: solid pink 1px;
+
+  background-color: white;
+
+  text-align: center;
+}
+
+header a {
+  display: inline-block;
+
+  color: black;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+header a::first-letter {
+  color: red;
+}
+
+h1 {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+
+  border-top: solid pink 1px;
+
+  color: gray;
+  font-family: Arial, serif;
+  font-size: 14px;
+}
+
+footer a {
+  color: #4c4cd8;
+}
+
+footer .copyright {
+  margin: 5px;
+
+  color: black;
+  text-align: right;
+}
+
+footer .author {
+  text-align: right;
+}
+
+.name a {
+  color: red;
+  text-decoration: none;
+}
+
+footer .author a {
+  background-color: orange;
+  color: black;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.name a:hover {
+  transition: 0.5s;
+
+  text-shadow: 2px 2px gray;
+}
+
+main {
+  padding: 58px 0 185px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  position: relative;
+
+  display: inline-block;
+
+  width: 27px;
+  height: 27px;
+  margin: 15px;
+
+  transition: 0.4s;
+
+  cursor: pointer;
+}
+
+input:checked ~ label {
+  transform: rotate(90deg);
+}
+
+.log {
+  position: relative;
+
+  display: block;
+
+  width: 27px;
+  height: 3px;
+  margin-top: 4px;
+
+  background-color: #000;
+}
+
+section img {
+  width: 100%;
+}
+
+main .sections {
+  padding: 0 25px;
+}
+
+section {
+  box-sizing: border-box;
+
+  margin: 10px;
+  padding: 20px;
+
+  border: 1px solid pink;
+
+  background-color: white;
+
+  text-align: left;
+}
+
+section:hover {
+  background-color: #ffcada;
+  box-shadow: 0 0 7px gray;
+}
+
+input:checked ~ .sections section {
+  display: inline-block;
+
+  width: 400px;
+}
+
+.name {
+  overflow: hidden;
+}
+
+.short-description {
+  display: none;
+
+  color: gray;
+  line-height: 3px;
+}
+
+input:checked ~ .sections .short-description {
+  display: block;
+}
+
+.status {
+  margin-top: 30px;
+}
+
+.full-description {
+  display: block;
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  color: gray;
+}
+
+input:checked ~ .sections section .full-description {
+  display: none;
+}

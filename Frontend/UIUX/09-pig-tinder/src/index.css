@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/ProximaNova-Regular.woff2');
+  src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+    url('fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/ProximaNova-Bold.woff2');
+  src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
+    url('fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+.button,
+.button:active,
+.button:focus {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  cursor: pointer;
+
+  outline: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  user-select: none;
+}
+
+.button:hover {
+  transition-duration: 0.15s;
+
+  transform: scale(1.05);
+}
+
+.body {
+  display: flex;
+  overflow-x: hidden;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 250px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.6rem;
+
+  line-height: 1.3125;
+
+  word-wrap: break-word;
+}
+
+.body__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 25px 10px;
+
+  border-bottom: 2px solid #eee;
+}
+
+.header__settings,
+.header__title,
+.header__messages {
+  box-sizing: border-box;
+
+  height: 100px;
+
+  margin: 0;
+  padding: 10px 0;
+}
+
+.header__settings {
+  padding: 30px 0 20px;
+}
+
+.header__messages {
+  padding: 34px 0 24px;
+}
+
+.header__svg {
+  width: auto;
+  height: 100%;
+
+  fill: #dadfe6;
+}
+
+.main {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: calc(100vh - 452px);
+  min-height: 800px;
+
+  padding: 10px;
+
+  background-color: #f5f7fa;
+}
+
+.main__card_first {
+  background: url('static/emma.jpg') no-repeat top center;
+}
+
+.main__card_second {
+  background: url('static/elle.jpg') no-repeat top center;
+}
+
+.main__card_third {
+  background: url('static/sigrid.jpg') no-repeat center center;
+}
+
+.main__card_fourth {
+  background: url('static/julie.jpg') no-repeat center center;
+}
+
+.main__card {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+
+  width: calc(100% - 20px);
+  height: calc(100vh - 472px);
+  min-height: 780px;
+
+  margin: 0;
+  padding: 40px;
+
+  border-radius: 15px;
+
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+
+  background-size: cover;
+
+  box-shadow: 0 2px 12px 0 #666;
+
+  color: #fff;
+
+  text-shadow: 0 2px 4px #000;
+}
+
+.main__card_second,
+.main__card_third,
+.main__card_fourth,
+.main__card_last {
+  opacity: 0;
+}
+
+.main__card_last {
+  margin: auto;
+
+  background: #fff url('static/last.png') no-repeat top center;
+
+  color: #666;
+
+  font-size: 6rem;
+
+  text-shadow: 0 2px 4px #aaa;
+}
+
+.main__card-name {
+  margin: 0;
+
+  font-size: 5rem;
+}
+
+.main__card-age {
+  font-weight: normal;
+}
+
+.main__card-info {
+  padding: 16px 0;
+
+  font-size: 3.5rem;
+}
+
+.main__seal {
+  position: absolute;
+
+  top: 350px;
+
+  display: none;
+}
+
+.main__seal_like {
+  right: 10%;
+
+  transform: rotateZ(30deg);
+}
+
+.main__seal_dislike {
+  left: 10%;
+
+  transform: rotateZ(-30deg);
+}
+
+.main__seal_super-like {
+  left: calc(50% - 193px);
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto;
+
+  padding: 50px;
+
+  background-color: #f5f7fa;
+}
+
+.controls__button {
+  display: flex;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  box-shadow: 0 4px 25px 0 #ddd;
+}
+
+.controls__button_super-like {
+  width: 100px;
+  height: 100px;
+}
+
+.controls__button-svg_left,
+.controls__button-svg_center,
+.controls__button-svg_right {
+  width: 60%;
+  height: 60%;
+
+  margin: auto;
+}
+
+.controls__button-svg_left {
+  fill: url(#gradient_red);
+}
+
+.controls__button-svg_center {
+  fill: url(#gradient_blue);
+}
+
+.controls__button-svg_right {
+  fill: url(#gradient_green);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Prenumeration</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <main>
+      <div class="form">
+        <form accept-charset="UTF-8" name="subscription">
+          <fieldset>
+            <legend>Prenumerera på IKEA-nyheter</legend>
+            <article>Få meddelanden om försäljning, nya produkter eller kollektioner</article>
+            <div class="options">
+              Välj vad är du intresserad av?
+              <input class="sales" type="checkbox" value="sales" id="sales">
+              <label class="sales" for="sales">Försäljning</label>
+              <input class="products" type="checkbox" value="products" id="products">
+              <label class="products" for="products">Nya produkter</label>
+              <input class="collections" type="checkbox" value="collections" id="collections">
+              <label class="collections" for="collections">Nya kollektioner</label>
+            </div>
+            <label for="sex">
+              Kön
+              <select aria-label="Select option" name="sex" id="sex">
+                <option selected>Inte välja</option>
+                <option value="1">Man</option>
+                <option value="2">Kvinna</option>
+              </select>
+            </label>
+            <label for="number">
+              Ange det maximala antalet bokstäver i en månad
+              <input type="number" id="number" min="0" value="4">
+            </label>
+            <label for="name">
+              Hur kan vi namnge dig
+              <input type="text" id="name">
+            </label>
+            <label for="email">
+              Skriv din e-post
+              <input type="email" id="email">
+            </label>
+            <label for="agreement">
+              <input type="checkbox" id="agreement">
+              Jag tillåter att använda min personliga information
+            </label>
+            <input type="submit" value="Överlämna">
+          </fieldset>
+        </form>
+        <button>
+          <svg>
+            <line x1="7" y1="7" x2="23" y2="23"/>
+            <line x1="23" y1="7" x2="7" y2="23"/>
+          </svg>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <address>
+        made by <a href="https://github.com/ShuffleZZZ" target="blank">ShuffleZZZ</a>
+      </address>
+    </footer>
+  </body>
+</html>

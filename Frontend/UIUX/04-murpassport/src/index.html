@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>04-murpassport</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="body">
+    <script type="text/javascript" src="./simulation.js"> </script>
+    <header class="header body__header">
+      <h1 class="header__text">Мурпаспорт</h1>
+    </header>
+    <div class="content body__content">
+      <aside class="sidebar content__sidebar">
+        <nav class="navigation sidebar__navigation">
+          <h2 class="navigation__header">Меню</h2>
+          <a class="navigation__button" href="#Data">Данные</a>
+          <a class="navigation__button" href="#Injections">Прививки</a>
+          <a class="navigation__button" href="#Gallery">Галлерея</a>
+          <a class="navigation__button" href="#Feedback">Обратная связь</a>
+        </nav>
+      </aside>
+      <main class="main content__sections">
+        <div class="main__anchor" id="Data"></div>
+        <section class="data content__section">
+          <h3 class="data__header">Данные</h3>
+          <img class="data__img" src="static/mainphoto.png" alt="Мейн-кун">
+          <p class="data__first_name">
+            Имя: Граф
+          </p>
+          <p class="data__last_name">
+            Фамилия: Великий
+          </p>
+          <p class="data__breed">
+            Порода: Мейн-кун
+          </p>
+          <p class="data__birthday">
+            Дата рождения: 11.08.2008
+          </p>
+        </section>
+        <div class="main__anchor" id="Injections"></div>
+        <section class="injections content__section">
+          <h3 class="injections__header">Прививки</h3>
+          <ul class="list injections__list">
+            <li class="list__item">
+              1.От чувства собственной важности
+            </li>
+            <li class="list__item">
+              2.От нелюбви к людям
+            </li>
+            <li class="list__item">
+              3.Для лучшей охоты за мышами
+            </li>
+          </ul>
+        </section>
+        <div class="main__anchor" id="Gallery"></div>
+        <section class="gallery content__section">
+          <h3 class="gallery__header">Галерея</h3>
+          <div class="gallery__photos">
+            <div class="gallery__wrapper">
+              <img class="gallery__img" src="static/gallery1.png" alt="Мейн-кун">
+            </div>
+            <div class="gallery__wrapper">
+              <img class="gallery__img" src="static/gallery2.png" alt="Мейн-кун">
+            </div>
+          </div>
+        </section>
+        <div class="main__anchor" id="Feedback"></div>
+        <section class="feedback content__section">
+          <h3 class="feedback__header">Обратная связь</h3>
+          <form class="form feedback__form">
+            <fieldset class="form__fieldset">
+              <label class="form__comment_label" for="Comment">Ваш комментарий:</label>
+              <textarea class="form__comment_input" rows="6" placeholder="Ваш комментарий" id="Comment"></textarea>
+              <label class="form__email_label" for="Email">Ваш e-mail:</label>
+              <input class="form__email_input" type="email" placeholder="e-mail" id="Email">
+              <input class="form__submit" type="submit" value="ОТПРАВИТЬ">
+            </fieldset>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer class="footer body__footer">
+      <address class="address footer__address">
+        e-mail:&laquo<a class="link address__mail" href="mailto:support@murpassport.ru"  target="blank">support@murpassport.ru</a>&raquo
+      </address>
+      <address class="address footer__copyright">
+        &copy; 2019 ООО&laquo<a class="link address__company" href="https://murpassport.com" target="blank">Мурпаспорт</a>&raquo
+      </address>
+      <address class="address footer__author">
+        mady by
+        <a class="link address__credits" href="https://github.com/ShuffleZZZ" target="blank">ShuffleZZZ</a>
+      </address>
+    </footer>
+  </body>
+</html>

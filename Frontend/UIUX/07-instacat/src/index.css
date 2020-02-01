@@ -1,0 +1,377 @@
+.body {
+  display: flex;
+  flex-direction: column;
+
+  width: 1167px;
+
+  margin: auto;
+}
+
+.body__sprites,
+.body__input {
+  position: absolute;
+
+  visibility: hidden;
+}
+
+.sprite {
+  width: 48px;
+  height: 48px;
+}
+
+.body__content,
+.body__icons {
+  width: 632px;
+
+  margin: 20px auto 0;
+  padding: 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icons__item {
+  display: none;
+
+  transition-duration: 0.15s;
+
+  cursor: pointer;
+
+  fill: #444444;
+
+  opacity: 0.8;
+}
+
+.icons__item:hover,
+.icons__item:active {
+  opacity: 1;
+}
+
+.icons__item_default {
+  display: block;
+}
+
+.icons__item-logo {
+  margin: 0 auto;
+}
+
+.body__content {
+  overflow: hidden;
+
+  height: 632px;
+
+  margin-top: 12px;
+}
+
+.content__transform_scale,
+.content__transform_rotate,
+.content__transform_flip,
+.content__picture {
+  width: 100%;
+  height: 100%;
+
+  transition-duration: 0.75s;
+}
+
+.content__picture {
+  display: flex;
+}
+
+.content__image,
+.content__image_static {
+  width: 100%;
+
+  margin: auto;
+}
+
+.body__filters {
+  margin: 50px auto 37px;
+  padding: 0;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+}
+
+.filters__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 695px;
+}
+
+.filters__left,
+.filters__right {
+  position: relative;
+  top: 120px;
+
+  width: 48px;
+  height: 31px;
+
+  margin: 0 35px;
+
+  user-select: none;
+}
+
+.filters__left {
+  transform: rotate(90deg);
+}
+
+.filters__right {
+  transform: rotate(-90deg);
+}
+
+.filters__left_active,
+.filters__right_active {
+  cursor: pointer;
+
+  opacity: 0.8;
+}
+
+.filters__right_blocked,
+.filters__left_blocked {
+  fill: rgba(170, 170, 170, 0.8);
+}
+
+.filters__svg {
+  width: 48px;
+  height: 31px;
+}
+
+.filter__label {
+  cursor: pointer;
+}
+
+.filters__item {
+  overflow: hidden;
+
+  width: 170px;
+  height: 217px;
+
+  margin: 0;
+}
+
+.filter__name {
+  margin: 15px 0;
+
+  font: normal 16px Helvetica, sans-serif;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+.filter__image {
+  width: 100%;
+}
+
+#fill:checked ~ .content .content__image {
+  width: auto;
+  height: 100%;
+}
+
+#scale_normal:checked ~ .icons .icons__item_normal {
+  display: none;
+}
+
+#scale_normal:checked ~ .icons .icons__item_small {
+  display: block;
+}
+
+#scale_small:checked ~ .icons .icons__item_small,
+#scale_small:checked ~ .icons .icons__item_normal {
+  display: none;
+}
+
+#scale_small:checked ~ .icons .icons__item_smallest {
+  display: block;
+}
+
+#scale_small:checked ~ .content .content__transform_scale {
+  transform: scale(0.75);
+}
+
+#scale_smallest:checked ~ .icons .icons__item_smallest {
+  display: none;
+}
+
+#scale_smallest:checked ~ .icons .icons__item_normal {
+  display: block;
+}
+
+#scale_smallest:checked ~ .content .content__transform_scale {
+  transform: scale(0.5);
+}
+
+#rotate_0deg:checked ~ .icons .icons__item_0deg {
+  display: none;
+}
+
+#rotate_0deg:checked ~ .icons .icons__item_90deg {
+  display: block;
+}
+
+#rotate_0deg:checked ~ .content .content__transform_rotate {
+  transition-duration: 0s;
+}
+
+#rotate_90deg:checked ~ .icons .icons__item_0deg,
+#rotate_90deg:checked ~ .icons .icons__item_90deg {
+  display: none;
+}
+
+#rotate_90deg:checked ~ .icons .icons__item_180deg {
+  display: block;
+}
+
+#rotate_90deg:checked ~ .content .content__transform_rotate {
+  transform: rotate(-0.25turn);
+}
+
+#rotate_180deg:checked ~ .icons .icons__item_0deg,
+#rotate_180deg:checked ~ .icons .icons__item_180deg {
+  display: none;
+}
+
+#rotate_180deg:checked ~ .icons .icons__item_270deg {
+  display: block;
+}
+
+#rotate_180deg:checked ~ .content .content__transform_rotate {
+  transform: rotate(-0.5turn);
+}
+
+#rotate_270deg:checked ~ .icons .icons__item_270deg {
+  display: none;
+}
+
+#rotate_270deg:checked ~ .icons .icons__item_0deg {
+  display: block;
+}
+
+#rotate_270deg:checked ~ .content .content__transform_rotate {
+  transform: rotate(-0.75turn);
+}
+
+#flip:checked ~ .content .content__transform_flip {
+  transform: scaleX(-1);
+}
+
+#logo:not(:checked) ~ .content .content__image_static,
+#logo:checked ~ .content .content__transform_scale,
+#logo:checked ~ .icons .icons__item {
+  display: none;
+}
+
+#logo:checked ~ .icons .icons__item-logo {
+  display: block;
+}
+
+#arrow:checked ~ .filters .filters__right_active,
+#arrow:checked ~ .filters .filters__left_blocked,
+#arrow:not(:checked) ~ .filters .filters__left_active,
+#arrow:not(:checked) ~ .filters .filters__right_blocked {
+  display: block;
+}
+
+#arrow:not(:checked) ~ .filters .filters__right_active,
+#arrow:not(:checked) ~ .filters .filters__left_blocked,
+#arrow:checked ~ .filters .filters__left_active,
+#arrow:checked ~ .filters .filters__right_blocked {
+  display: none;
+}
+
+#arrow:checked ~ .filters .filters__item:nth-child(1),
+#arrow:not(:checked) ~ .filters .filters__item:nth-child(5) {
+  display: block;
+}
+
+#arrow:not(:checked) ~ .filters .filters__item:nth-child(1),
+#arrow:checked ~ .filters .filters__item:nth-child(5) {
+  display: none;
+}
+
+#filter:checked ~ .filters .filter .filter__name {
+  font-weight: bold;
+}
+
+#filter:checked ~ .content .content__image {
+  animation: none;
+}
+
+#filter_hu-rotate:checked ~ .filters .filter_blue .filter__name {
+  font-weight: bold;
+}
+
+#filter_hu-rotate:checked ~ .content .content__image {
+  animation: animation_blue 0.75s linear forwards;
+}
+
+@keyframes animation_blue {
+  to {
+    filter: hue-rotate(180deg);
+  }
+}
+
+#filter_grayscale:checked ~ .filters .filter_gray .filter__name {
+  font-weight: bold;
+}
+
+#filter_grayscale:checked ~ .content .content__image {
+  animation: animation_gray 0.75s linear forwards;
+}
+
+@keyframes animation_gray {
+  to {
+    filter: grayscale(100%);
+  }
+}
+
+#filter_sepia:checked ~ .filters .filter_sepia .filter__name {
+  font-weight: bold;
+}
+
+#filter_sepia:checked ~ .content .content__image {
+  animation: animation_sepia 0.75s linear forwards;
+}
+
+@keyframes animation_sepia {
+  to {
+    filter: sepia(100%);
+  }
+}
+
+#filter_blur:checked ~ .filters .filter_blur .filter__name {
+  font-weight: bold;
+}
+
+#filter_blur:checked ~ .content .content__image {
+  animation: animation_blur 0.75s linear forwards;
+}
+
+@keyframes animation_blur {
+  to {
+    filter: blur(5px);
+  }
+}
+
+.filter_blue .filter__image {
+  animation: animation_blue linear forwards;
+}
+
+.filter_gray .filter__image {
+  animation: animation_gray linear forwards;
+}
+
+.filter_sepia .filter__image {
+  animation: animation_sepia linear forwards;
+}
+
+.filter_blur .filter__image {
+  animation: animation_blur linear forwards;
+}

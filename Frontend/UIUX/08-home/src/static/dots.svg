@@ -1,0 +1,5 @@
+<svg class="news__stocks-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+  <ellipse cx="2.5" cy="7.5" rx="1.5" ry="1.5"/>
+  <ellipse cx="7.5" cy="7.5" rx="1.5" ry="1.5"/>
+  <ellipse cx="12.5" cy="7.5" rx="1.5" ry="1.5"/>
+</svg>

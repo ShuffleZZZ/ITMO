@@ -1,0 +1,72 @@
+.train {
+  animation: train_main 16s linear infinite;
+}
+
+@keyframes train_main {
+  0% {
+    margin-right: 380px;
+  }
+
+  37% {
+    margin-right: 890px;
+
+    animation-timing-function: step-start;
+  }
+
+  38% {
+    margin-right: -460px;
+
+    animation-timing-function: linear;
+  }
+
+  100% {
+    margin-right: 380px;
+  }
+}
+
+.wheel {
+  animation: train_wheel 1.5s linear infinite;
+}
+
+@keyframes train_wheel {
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+.wheel-joint {
+  animation: train_joint 1.5s linear infinite;
+}
+
+@keyframes train_joint {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.smoke {
+  animation: train_smoke 1s ease-out infinite;
+}
+
+.smoke-2 {
+  animation-delay: 0.1s;
+}
+
+.smoke-3 {
+  animation-delay: 0.2s;
+}
+
+.smoke-4 {
+  animation-delay: 0.3s;
+}
+
+@keyframes train_smoke {
+  to {
+    margin-top: -3rem;
+    margin-left: 3rem;
+
+    transform: scale(4, 1);
+
+    opacity: 0;
+  }
+}

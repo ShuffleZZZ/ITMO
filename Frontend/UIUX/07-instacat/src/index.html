@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Behance</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body class="body">
+    <svg class="sprites body__sprites">
+      <linearGradient id="gradient-logo" x1="0" y1="100%" x2="100%" y2="0">
+        <stop offset="0" stop-color="#f27121"></stop>
+        <stop offset="50%" stop-color="#e94057"></stop>
+        <stop offset="100%" stop-color="#8a2387"></stop>
+      </linearGradient>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-arrow">
+        <path d="M.5 7.401L24.428 31.33 48.357 7.4 41.569.613l-17.14 17.14L7.288.614z" fill-rule="evenodd"/>
+      </symbol>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-fill">
+        <g>
+          <path d="M8.395 8.395h30.996v30.996H8.395z"/>
+          <path d="M35.946 0v5.166h6.888v6.673H48V0zM5.166 5.166h6.673V0H0v11.839h5.166zM42.834 42.834h-6.888V48H48V35.946h-5.166zM5.166 35.946H0V48h11.839v-5.166H5.166z"/>
+        </g>
+      </symbol>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-flip">
+        <g>
+          <path d="M0 29.9l19.084-11.788L0 6.325z"/>
+          <path d="M28.916 18.112L48 29.9V6.325L28.916 18.112zm15.058 4.425l-7.163-4.425 7.163-4.424v8.849z" fill-rule="nonzero"/>
+          <path d="M21.398 8.05h5.205v5.175h-5.205zM21.398 0h5.205v5.175h-5.205zM21.398 16.1h5.205v5.175h-5.205zM21.398 23.575h5.205v5.175h-5.205zM21.398 31.625h5.205V36.8h-5.205z"/>
+        </g>
+      </symbol>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-logo">
+        <path d="M0 0v48h48V0H0zm24.107 16.782a7.12 7.12 0 0 1 7.11 7.111 7.12 7.12 0 0 1-7.11 7.111 7.12 7.12 0 0 1-7.111-7.11 7.12 7.12 0 0 1 7.11-7.112zM6.4 5.547h7.253v4.693H6.4V5.547zM41.6 41.6H6.4V24.747h4.225c.443 7.053 6.318 12.657 13.482 12.657 7.163 0 13.039-5.604 13.481-12.657H41.6V41.6z" fill="url(#gradient-logo)" fill-rule="evenodd"/>
+      </symbol>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-rotate">
+        <path d="M24 48c13.234 0 24-9.765 24-21.753 0-11.99-10.766-21.749-24-21.749-.88 0-1.768.046-2.651.136V1.119c0-.452-.308-.863-.761-1.038a1.353 1.353 0 0 0-1.355.251l-8.504 7.722c-.484.438-.484 1.138 0 1.583l8.5 7.739c.362.319.886.418 1.359.243.453-.177.76-.585.76-1.035v-3.899c.88-.146 1.764-.212 2.651-.212 8.384 0 15.207 6.18 15.207 13.774 0 7.593-6.825 13.778-15.207 13.778-8.382 0-15.203-6.187-15.203-13.778 0-.616-.553-1.12-1.24-1.12H1.24c-.684 0-1.241.504-1.241 1.12C0 38.235 10.774 48 24 48z" fill-rule="evenodd"/>
+      </symbol>
+      <symbol class="sprite sprites__item" xmlns="http://www.w3.org/2000/svg" id="sprite-scale">
+        <g>
+          <path d="M0 0v48h48V0H0zm6.4 6.4h33.682L6.4 40.227V6.4zm34.56 32.427H25.6v-6.4h15.36v6.4z" fill-rule="nonzero"/>
+          <path d="M24 13.071h-4.375v-4.5h-6.25v4.5H9V19.5h4.375V24h6.25v-4.5H24z"/>
+        </g>
+      </symbol>
+    </svg>
+    <input class="body__input" type="checkbox" id="fill">
+    <input class="body__input" type="radio" name="scale" id="scale_normal" checked>
+    <input class="body__input" type="radio" name="scale" id="scale_small">
+    <input class="body__input" type="radio" name="scale" id="scale_smallest">
+    <input class="body__input" type="checkbox" id="logo">
+    <input class="body__input" type="radio" name="rotate" id="rotate_0deg" checked>
+    <input class="body__input" type="radio" name="rotate" id="rotate_90deg">
+    <input class="body__input" type="radio" name="rotate" id="rotate_180deg">
+    <input class="body__input" type="radio" name="rotate" id="rotate_270deg">
+    <input class="body__input" type="checkbox" id="flip">
+    <menu class="icons body__icons" type="toolbar">
+      <label class="icons__item icons__item_default" for="fill">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-fill"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_default icons__item_normal" for="scale_normal">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-scale"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_small" for="scale_small">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-scale"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_smallest" for="scale_smallest">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-scale"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_default" for="logo">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-logo"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item-logo" for="logo">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-logo"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_default icons__item_0deg" for="rotate_0deg">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-rotate"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_90deg" for="rotate_90deg">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-rotate"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_180deg" for="rotate_180deg">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-rotate"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_270deg" for="rotate_270deg">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-rotate"></use>
+        </svg>
+      </label>
+      <label class="icons__item icons__item_default" for="flip">
+        <svg class="sprite icons__svg">
+          <use xlink:href="#sprite-flip"></use>
+        </svg>
+      </label>
+    </menu>
+    <input class="body__input" type="radio" name="filter" id="filter" checked>
+    <input class="body__input" type="radio" name="filter" id="filter_hu-rotate">
+    <input class="body__input" type="radio" name="filter" id="filter_grayscale">
+    <input class="body__input" type="radio" name="filter" id="filter_sepia">
+    <input class="body__input" type="radio" name="filter" id="filter_blur">
+    <input class="body__input" type="checkbox" id="arrow" checked>
+    <main class="content body__content">
+      <div class="content__transform_scale">
+        <div class="content__transform_rotate">
+          <div class="content__transform_flip">
+            <picture class="content__picture">
+              <source type="image/webp" srcset="static/img.webp">
+              <source type="image/jpeg" srcset="static/img.jpg">
+              <img class="content__image" src="static/img.jpg" alt="art">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <picture class="content__picture">
+        <source type="image/webp" srcset="static/img.webp">
+        <source type="image/jpeg" srcset="static/img.jpg">
+        <img class="content__image_static" src="static/img.jpg" alt="art">
+      </picture>
+    </main>
+    <menu class="filters body__filters" type="toolbar">
+      <div class="filters__left filters__left_blocked">
+        <svg class="filters__svg">
+          <use class="filters__svg" xlink:href="#sprite-arrow"></use>
+        </svg>
+      </div>
+      <label class="filters__left filters__left_active" for="arrow">
+        <svg class="filters__svg">
+          <use class="filters__svg" xlink:href="#sprite-arrow"></use>
+        </svg>
+      </label>
+      <div class="filters__main">
+        <div class="filter filters__item">
+          <h5 class="filter__name">No Filter</h5>
+          <label class="filter__label" for="filter">
+            <picture class="filter__picture">
+              <source type="image/webp" srcset="static/img_small.webp">
+              <source type="image/jpeg" srcset="static/img_small.jpg">
+              <img class="filter__image" src="static/img_small.jpg" alt="no-filter">
+            </picture>
+          </label>
+        </div>
+        <div class="filter_blue filters__item">
+          <h5 class="filter__name">Blue</h5>
+          <label class="filter__label" for="filter_hu-rotate">
+            <picture class="filter__picture">
+              <source type="image/webp" srcset="static/img_small.webp">
+              <source type="image/jpeg" srcset="static/img_small.jpg">
+              <img class="filter__image" src="static/img_small.jpg" alt="blue-filter">
+            </picture>
+          </label>
+        </div>
+        <div class="filter_gray filters__item">
+          <h5 class="filter__name">Black And White</h5>
+          <label class="filter__label" for="filter_grayscale">
+            <picture class="filter__picture">
+              <source type="image/webp" srcset="static/img_small.webp">
+              <source type="image/jpeg" srcset="static/img_small.jpg">
+              <img class="filter__image" src="static/img_small.jpg" alt="gray-filter">
+            </picture>
+          </label>
+        </div>
+        <div class="filter_sepia filters__item">
+          <h5 class="filter__name">Sepia</h5>
+          <label class="filter__label" for="filter_sepia">
+            <picture class="filter__picture">
+              <source type="image/webp" srcset="static/img_small.webp">
+              <source type="image/jpeg" srcset="static/img_small.jpg">
+              <img class="filter__image" src="static/img_small.jpg" alt="sepia-filter">
+            </picture>
+          </label>
+        </div>
+        <div class="filter_blur filters__item">
+          <h5 class="filter__name">Blur</h5>
+          <label class="filter__label" for="filter_blur">
+            <picture class="filter__picture">
+              <source type="image/webp" srcset="static/img_small.webp">
+              <source type="image/jpeg" srcset="static/img_small.jpg">
+              <img class="filter__image" src="static/img_small.jpg" alt="blur-filter">
+            </picture>
+          </label>
+        </div>
+      </div>
+      <div class="filters__right filters__right_blocked">
+        <svg class="filters__svg">
+          <use class="filters__svg" xlink:href="#sprite-arrow"></use>
+        </svg>
+      </div>
+      <label class="filters__right filters__right_active" for="arrow">
+        <svg class="filters__svg">
+          <use class="filters__svg" xlink:href="#sprite-arrow"></use>
+        </svg>
+      </label>
+    </menu>
+  </body>
+</html>
