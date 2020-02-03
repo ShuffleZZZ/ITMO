@@ -1,4 +1,4 @@
-/*import cdeclaration.CDeclarationLexer
+import cdeclaration.CDeclarationLexer
 import cdeclaration.CDeclarationParser
 import java.io.File
 
@@ -66,6 +66,6 @@ fun main() {
             println("LexicalException in test$i \"$input\": ${e.message}")
         }
     }
-}*/
+}
 
 
