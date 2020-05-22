@@ -1,0 +1,17 @@
+# Parallel programming
+
+## 1. [Possible Executions Analysis](possible-executions-analysis/)
+## 2. [Stack with Elimination](stack-elimination/)
+## 3. [Michael-Scott Queue](msqueue/)
+## 4. [Fine-Grained Locking](fine-grained-bank/)
+## 5. [Lock-Free Set via Linked Lists](linked-list-set/)
+## 6. [Incorrect Lamport Lock Algorithm](lamport-lock-fail/)
+## 7. [Parallel Dijkstra with Multi-Queue](dijkstra/)
+## 8. [Monotonic Clock](monotonic-clock/)
+## 9. [Universal Construction](universal-construction/)
+## 10. [MCS Lock](mcs-lock/)
+## 11. [FAA-Based Queue](faa-queue/)
+## 12. [Synchronous Queue](synchronous-queue/)
+## 13. [Lock-Free Bank](lock-free-bank/)
+## 14. [STM Bank](stm-bank/)
+## 15. [Blocking Stack](blocking-stack/)
