@@ -1,0 +1,24 @@
+name:                practice
+version:             0.1.0.0
+synopsis:            Synopsis for practice
+description:         Practice for FP ITMO course
+
+homepage:            https://github.com/ShuffleZZZ/fp-homework/tree/master/practice#readme
+license:             MIT
+license-file:        LICENSE
+author:              Glagolev Mikhail
+maintainer:          mihpihnaty@yandex.ru
+copyright:           2020 Glagolev Mikhail
+
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+tested-with:         GHC == 8.6.5
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Practice
+  ghc-options:         -Wall
+  build-depends:       base >= 4.9 && < 5
+  default-language:    Haskell2010

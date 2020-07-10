@@ -1,0 +1,42 @@
+name:                hw3
+version:             0.1.0.0
+synopsis:            Synopsis for task 3
+description:         Task 3 for FP ITMO course
+
+homepage:            https://github.com/ShuffleZZZ/fp-homework/tree/master/hw3#readme
+license:             MIT
+license-file:        LICENSE
+author:              Glagolev Mikhail
+maintainer:          mihpihnaty@yandex.ru
+copyright:           2020 Glagolev Mikhail
+
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+tested-with:         GHC == 8.6.5
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Task1, Task1Naive, Task2, Task3, Task4, Task5, Task6, Task7, Task8
+  ghc-options:         -Wall
+  build-depends:       base >= 4.9 && < 5, ansi-terminal, containers, directory, filepath, microlens, random, stm, vector
+  default-language:    Haskell2010
+
+test-suite hw3-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  other-modules:       Task3Spec, Task4Spec
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base, hw3, hspec
+  default-language:    Haskell2010
+
+benchmark hw3-benchmark
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      benchmark
+  main-is:             Main.hs
+  other-modules:       Task1Bench
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base, hw3, criterion, deepseq
+  default-language:    Haskell2010
