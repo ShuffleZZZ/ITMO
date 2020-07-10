@@ -12,13 +12,13 @@
 - __Course by:__ Yandex company
 
 
-## [Functional programming](Haskell/) (_in progress_)
+## [Functional programming](Haskell/fp-homework/)
 
 - __Semester:__ 6
 
 - __Content:__ Haskell homeworks as Stack projects
 
-- __Course structure:__ _not finished_
+- __Course structure:__ [FP ITMO course](https://github.com/jagajaga/FP-course-ITMO)
 
 - __Course by:__ Serokell company
 
