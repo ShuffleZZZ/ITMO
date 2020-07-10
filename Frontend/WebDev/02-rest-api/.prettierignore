@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+package.json
+package-lock.json
+
+# Testing
+coverage/
+
+# Artifacts
+build/

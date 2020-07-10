@@ -1,0 +1,61 @@
+{
+  "private": true,
+  "name": "js-task-07",
+  "version": "1.0.0",
+  "description": "Задача №7 «Собеседование Аркадия»",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "test": "jest --detectOpenHandles",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint \"**/*.ts\"",
+    "lint-fix": "eslint --fix \"**/*.ts\"",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "start": "npm run build && node ./build/app.js"
+  },
+  "devDependencies": {
+    "@types/bluebird": "3.5.30",
+    "@types/express": "4.17.3",
+    "@types/jest": "24.0.23",
+    "@types/node": "13.9.1",
+    "@types/supertest": "2.0.8",
+    "@types/validator": "12.0.1",
+    "@yandex-lms-ext/eslint-config-base": "2.0.2",
+    "@yandex-lms-ext/prettier-config": "1.0.2",
+    "eslint": "6.7.2",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm-run-all lint test",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "pg": "7.18.2",
+    "pg-hstore": "2.3.3",
+    "sequelize": "5.21.5",
+    "sequelize-typescript": "1.1.0",
+    "supertest": "4.0.2"
+  }
+}

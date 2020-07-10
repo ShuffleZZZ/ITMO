@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "target": "es2019",
+    "module": "commonjs",
+
+    "allowJs": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./src-for-tests/**/*.ts", "./test/**/*.ts"]
+}

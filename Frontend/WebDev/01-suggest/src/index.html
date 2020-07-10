@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Авиабилеты</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="static/favicon.png" sizes="32x32">
+  </head>
+  <body class="body">
+    <div class="body__wrapper">
+      <form class="form body__form" autocomplete="off" onsubmit="return false;">
+        <div class="input form__input">
+          <label class="input__label" for="input0">
+            <div class="input__text-field">
+              <input class="input__text" id="input0" type="text" placeholder="Откуда" required>
+            </div>
+            <svg class="input__deleter" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18zM5.41 7l2 2-2 2c-1.06 1.06.53 2.65 1.59
+              1.59l2-2 2 2c1.06 1.06 2.65-.53 1.59-1.59l-2-2 2-2c1.06-1.06-.53-2.65-1.59-1.59l-2
+              2-2-2C5.94 4.35 4.35 5.94 5.4 7z"/>
+            </svg>
+          </label>
+          <div class="suggestions form__suggestions"></div>
+        </div>
+        <div class="swap form__swap">
+          <button class="swap__button" type="button">
+            <svg class="swap__svg" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.9998-.0002l5 4.001-5 3.999v-3h-10v-1.999h10v-3.001zM0
+              12.0004l5-4.001v3h10v2.001H5v3l-5-4z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="input form__input">
+          <label class="input__label input__label_2" for="input1">
+            <div class="input__text-field">
+              <input class="input__text" id="input1" type="text" placeholder="Куда" required>
+            </div>
+            <svg class="input__deleter" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18A9 9 0 1 1 9 0a9 9 0 0 1 0 18zM5.41 7l2 2-2 2c-1.06 1.06.53 2.65 1.59
+              1.59l2-2 2 2c1.06 1.06 2.65-.53 1.59-1.59l-2-2 2-2c1.06-1.06-.53-2.65-1.59-1.59l-2
+              2-2-2C5.94 4.35 4.35 5.94 5.4 7z"/>
+            </svg>
+          </label>
+          <div class="suggestions form__suggestions"></div>
+        </div>
+        <div class="input form__input form__input-date">
+          <label class="input__label input__label-date" for="input2">
+            <div class="input__text-field">
+              <input class="input__text input__text-date" id="input2"
+                     type="date" value="2020-03-11" required>
+            </div>
+          </label>
+        </div>
+        <div class="input form__input form__input-amount">
+          <label class="input__label input__label-amount" for="input3">
+            <div class="input__text-field input__text-field-extended">
+              <div class="input__description">Количество билетов</div>
+              <input class="input__text" id="input3" type="number" min="1" value="1" required>
+            </div>
+          </label>
+        </div>
+        <button class="button form__button" type="submit">
+          <div class="button__text">Найти</div>
+        </button>
+      </form>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+
