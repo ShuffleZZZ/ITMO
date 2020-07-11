@@ -1,13 +1,18 @@
 ﻿# Computer Science course at ITMO University
 
 
-## [Frontend](Frontend/) (_in progress_)
+## [Frontend](Frontend/)
 
 - __Semesters:__ 5-6
 
 - __Content:__ UI/UX, JavaScript and web development homeworks with HTML, CSS, JavaScript, TypeScript, React, PostgreSQL and Docker
 
-- __Course structure:__ _not finished_
+- __Course structure:__ 
+  - 5th semester:
+    - [UI/UX course](Frontend/UIUX/)
+    - [JS course](Frontend/JavaScript/)
+  - 6th semester:
+    - [Web development course](Frontend/WebDev/)
 
 - __Course by:__ Yandex company
 
@@ -23,7 +28,7 @@
 - __Course by:__ Serokell company
 
 
-## [Numerical Methods](Haskell/) (_in progress_)
+## [Numerical Methods](numerical-methods/) (_in progress_)
 
 - __Semester:__ 6
 
