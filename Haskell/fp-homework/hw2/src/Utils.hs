@@ -235,7 +235,7 @@ helpText :: String
 helpText =
   "\n\nWelcome to haskell file-system shell\n\n"
     ++ "    (c) 2020 by Glagolev Mikhail\n\n"
-    ++ "Availible commands:\n\n"
+    ++ "Available commands:\n\n"
     ++ "    help                   -- ^ show this usage guide\n"
     ++ "    cd    <directory>      -- ^ go to directory (\"cd ..\" would move you to the parent directory)\n"
     ++ "    dir                    -- ^ show the content of current directory\n"
