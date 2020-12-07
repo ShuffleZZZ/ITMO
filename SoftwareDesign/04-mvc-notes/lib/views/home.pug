@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  section.section
+    .container
+
+      h1.title.has-text-centered
+        | Notes
+
+      .tabs.is-centered
+        ul
+          li
+            a.show-modal(href='#') Create
+
+      main(container).lists-list
+        each list in data.lists
+          include components/list
+
+      .modal
+        .modal-background
+        .modal-card
+          header.modal-card-head
+            p.modal-card-title Add note
+            button.delete(aria-label='close')
+          section.modal-card-body
+            form(action='/note' method='POST').note-form#note-form
+              .field
+                .control
+                  input.input(name='noteTitle' type='text' placeholder='Title')
+              .field
+                .control
+                  input.input(name='noteList' type='text' placeholder='List')
+              .field
+                .control
+                  textarea.textarea(name='noteContent' placeholder='Contents')
+              .field
+                .control
+                  button.button.is-link Save

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  section.section
+    .container
+
+      h1.title.has-text-centered
+        | Notes
+
+      .tabs.is-centered
+        ul
+          li
+            a(href='/') Home
+
+      main(container).notes-list
+        each note in data.notes
+          include components/note

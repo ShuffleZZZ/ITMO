@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  section.section
+    .container
+      h1.title.has-text-centered
+          | Notes
+
+      .tabs.is-centered
+        ul
+          li: a(href='/') Home
+          li: a(href=`/note/${note.slug}/done`) Done
+          li: a(href=`/note/${note.slug}/delete`) Delete
+
+      include components/note

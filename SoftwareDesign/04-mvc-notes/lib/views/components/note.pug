@@ -1,0 +1,10 @@
+if note.isDone
+  article.content.has-background-primary.box
+    h2.title: a(href=`/note/${note.slug}`)= note.title
+    p.subtitle.is-6 Published on #{note.date}
+    p=note.content
+else
+  article.content.box
+    h2.title: a(href=`/note/${note.slug}`)= note.title
+    p.subtitle.is-6 Published on #{note.date}
+    p=note.content
