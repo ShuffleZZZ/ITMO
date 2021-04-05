@@ -3,7 +3,7 @@ import io.ktor.server.testing.*
 import org.junit.Assert.*
 import org.junit.Test
 
-class StocksBaseTest {
+class StocksTest {
     @Test
     fun testRoot() {
         withTestApplication({ module(testing = true) }) {
