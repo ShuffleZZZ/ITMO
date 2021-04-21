@@ -16,7 +16,7 @@
 
 2. Analyze the solutions on given functions:
     - quadratic function: $100 * (x_2 - x_1)^2 + (1 - x_1)^2$
-    - Rosenbrock function: $100 * (x_2 - x_1)^2 + (1 - x_1)^2$
+    - Rosenbrock function: $100 * (x_2 - x_1)^2 + (1 - x_1)^2$ \
     Find the maximum of following function: $f(x, y) = 2 * exp(-((x - 1) / 2)^2 - (y - 1)^2) + 3 * exp(-((x - 2) / 3)^2 - ((y - 3) / 2)^2)$ with different starting points (not less than 5).
 
 3. Analyze and compare the convergence of both methods with the gradient descend. Compare convergence speed, reliability, and resources (RAM, number of operations, lead time).
