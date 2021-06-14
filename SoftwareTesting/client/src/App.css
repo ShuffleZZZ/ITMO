@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+
+  font-size: 32px;
+
+  background: url(/images/pool.jpg) no-repeat;
+  background-size: 100% auto;
+
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+}
+
+.links:hover {
+  border-bottom: 4px solid yellow;
+}
+
+.img {
+  margin-left: 15%;
+  padding: 25px;
+}
+
+.img_logo {
+  width: 50px;
+
+  transition-duration: 0.125s;
+}
+
+.img_logo:hover {
+  width: 60px;
+
+  margin-left: -5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  height: 85vh;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  margin: auto;
+
+  color: white;
+}
+
+.title-center {
+  margin-bottom: 0;
+}
+
+.description {
+  margin: 20px auto auto auto;
+
+  color: white;
+}
+
+.form {
+  min-height: 40vh;
+  min-width: 30%;
+
+  margin: auto;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border-radius: 15px;
+
+  padding: 40px;
+}
+
+.form_header {
+  margin: 10px 0;
+}
+
+.form_field {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 25px;
+}
+
+.form_input {
+  min-height: 40px;
+
+  width: 90%;
+
+  font-size: 15px;
+}
+
+.form_button {
+  min-height: 40px;
+  min-width: 25%;
+}
+
+.button-black {
+  border: 0px;
+  border-radius: 5px;
+
+
+  color: black;
+  font-size: 15px;
+}
+

@@ -1,0 +1,30 @@
+name: cicd
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  test:
+    name: run jest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - name: install dependencies
+      working-directory: client
+      run: npm install
+
+    - name: test
+      working-directory: client
+      run: npm test
+

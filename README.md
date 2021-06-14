@@ -1,6 +1,62 @@
 ﻿# Computer Science course at ITMO University
 
 
+## [Software Design](SoftwareDesign/)
+
+- __Semesters:__ 7-8
+
+- __Content:__ Laboratory works mostly in Kotlin with sole JavaScript and TypeScript solutions
+
+- __Course structure:__
+  - 7th semester:
+    - [LRU cache with asserts in TS](SoftwareDesign/01-lru-cache/)
+    - [Tweets extractor mock testing](SoftwareDesign/02-mock/)
+    - [Notes app with MVC pattern in JS](SoftwareDesign/04-mvc-notes/)
+  - 8th semester:
+    - [Search request app using actors](SoftwareDesign/09-actors/)
+    - [Reactive wallet app](SoftwareDesign/10-reactive/)
+    - [Entance system using event sourcing](SoftwareDesign/11-event-sourcing/)
+    - [Stocking app with test containers](SoftwareDesign/11-event-sourcing/)
+
+
+- __Course by:__ Alexander Kirakozov
+
+
+## [Optimization Methods](OptimizationMethods/)
+
+- __Semester:__ 8
+
+- __Content:__ Laboratory works in Python
+
+- __Course structure:__ [README](OptimizationMethods#readme)
+
+- __Course by:__ Mary Moskalenko
+
+
+## [Software Testing](SoftwareTesting/)
+
+- __Semester:__ 7
+
+- __Content:__ Testing the React app
+
+- __Course structure:__ [README](SoftwareTesting#readme)
+
+- __Course by:__ Vsevolod Brekelov
+
+
+## [Coding Theory](CodingTheory/)
+
+- __Semester:__ 7
+
+- __Content:__ Test and Laboratory work
+
+- __Course structure:__ 
+  1. [Golay decoding lab](CodingTheory/GolayCode/)
+  2. [Syndrome decoding work](CodingTheory/work1/)
+
+- __Course by:__ Boris Kudryashov
+
+
 ## [Frontend](Frontend/)
 
 - __Semesters:__ 5-6
@@ -28,13 +84,13 @@
 - __Course by:__ Serokell company
 
 
-## [Numerical Methods](numerical-methods/) (_in progress_)
+## [Numerical Methods](NumericalMethods/)
 
 - __Semester:__ 6
 
-- __Content:__ Homeworks and Course work
+- __Content:__ Homeworks and Course work mostly on Python with few cases of C++
 
-- __Course structure:__ _not finished_
+- __Course structure:__ [README](NumericalMethods#readme)
 
 - __Course by:__ Alex Segal
 

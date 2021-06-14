@@ -1,0 +1,37 @@
+name: deploy
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    name: deploy site
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: deploy api
+      uses: akhileshns/heroku-deploy@v3.8.9
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_AUTH_TOKEN }}
+        heroku_app_name: pool-party-api
+        heroku_email: mihpihnaty@yandex.ru
+        appdir: api
+        buildpack: heorku/nodejs
+
+    - name: deploy client
+      uses: akhileshns/heroku-deploy@v3.8.9
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_AUTH_TOKEN }}
+        heroku_app_name: pool-party-site
+        heroku_email: mihpihnaty@yandex.ru
+        appdir: client
+        delay: 20
+        healthcheck: https://pool-party-site.herokuapp.com/
+        rollbackonhealthcheckfailed: true
+        buildpack: https://github.com/mars/create-react-app-buildpack
+      env:
+        HD_REACT_APP_API_URL: https://pool-party-api.herokuapp.com/
+
